@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dark mode input styling */
+input {
+  @apply bg-zinc-800 text-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  color-scheme: dark;
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Placeholder text color */
+::placeholder {
+  @apply text-gray-400;
+}
